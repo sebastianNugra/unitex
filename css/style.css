@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .3s;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+section {
+    padding: 1.5rem 9%;
+}
+
+:root {
+    --primary: #DDE1ED;
+    --p2: #224F34;
+    --white: #fff;
+    --green: rgba(8, 96, 8, 0.905);
+    --hue: 152;
+    --header-height: 3.5rem;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+*::selection {
+    background: var(--p2);
+    color: #fff;
+}
+
+.heading {
+    counter-reset: #224f34;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Roboto Slab;
+}
+
+/* Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 9%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.header .navbar a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 1.5rem;
+    color: var(--p2);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--p2);
+}
+
+.header .navbar a.active,
+.header .navbar a:hover {
+    color: #10321e;
+    border-bottom: 1px solid #10321e;
+}
+
+#menu {
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    color: var(--primary);
+    cursor: pointer;
+    display: none;
+}
