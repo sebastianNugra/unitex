@@ -1,224 +1,483 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unitex</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
 
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Unitex | Modern Fashion</title>
+
+    <meta name="description" content="Premium fashion products with modern style and comfort." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="picture/logoCZ.png" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
 
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header class="header">
 
-        <a href="" class="logo">Unitex</a>
+        <a href="#" class="logo">
+            <img src="picture/logoCZ.png" alt="Unitex Logo">
+        </a>
 
         <nav class="navbar">
-            <a href="" class="active">Home</a>
-            <a href="">Product</a>
-            <a href="">Contact</a>
+
+            <a href="#home" class="active">Home</a>
+
+            <a href="#products">Products</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
         </nav>
 
-        <div id="menu" class="fas fa-bars"></div>
+        <button id="menu-btn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
 
     </header>
 
-    <!-- Home -->
+    <!-- HERO -->
+    <section class="home" id="home">
 
+        <div class="swiper home-slider">
 
-    <section class="bg">
-        <div class="home">
-            <div class="swiper home-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="box" style="background: url(picture/imgPr.avif);">
-                            <div class="content">
-                                <span>Upto 75% off</span>
-                                <h3>Discover and <br> sale Special Offer <br> Fashion <br></h3>
-                                <a href="" class="btn">Order Now!</a>
-                            </div>
+            <div class="swiper-wrapper">
+
+                <!-- SLIDE -->
+                <div class="swiper-slide">
+
+                    <div class="slide" style="background-image: url('picture/imgPr.avif');">
+
+                        <div class="overlay"></div>
+
+                        <div class="content" data-aos="fade-up">
+
+                            <span>NEW COLLECTION 2026</span>
+
+                            <h1>
+                                Premium Fashion
+                                For Modern People
+                            </h1>
+
+                            <p>
+                                Elegant, minimal and comfortable products designed
+                                for your lifestyle.
+                            </p>
+
+                            <a href="#products" class="btn">
+                                Explore Products
+                            </a>
+
                         </div>
+
                     </div>
-                    <div class="swiper-slide">
-                        <div class="box" style="background: url(picture/img2.avif);">
-                            <div class="content">
-                                <span>Upto 75% off</span>
-                                <h3>Discover and <br> sale Special Offer <br> Fashion <br></h3>
-                                <a href="" class="btn">Order Now!</a>
-                            </div>
+
+                </div>
+
+                <!-- SLIDE -->
+                <div class="swiper-slide">
+
+                    <div class="slide" style="background-image: url('picture/img2.avif');">
+
+                        <div class="overlay"></div>
+
+                        <div class="content" data-aos="fade-up">
+
+                            <span>UP TO 75% OFF</span>
+
+                            <h1>
+                                Modern Lifestyle Collection
+                            </h1>
+
+                            <p>
+                                Discover high quality products with premium design.
+                            </p>
+
+                            <a href="#products" class="btn">
+                                Shop Now
+                            </a>
+
                         </div>
+
                     </div>
-                    <div class="swiper-slide">
-                        <div class="box" style="background: url(picture/img3.png);">
-                            <div class="content">
-                                <span>Upto 75% off</span>
-                                <h3>Discover and <br> sale Special Offer <br> Fashion <br></h3>
-                                <a href="" class=" btn">Order Now!</a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="section_container ins_container" id="ins">
-            <div class="ins_flex">
-                <img src="picture/imgPr.avif" alt="">
-                <img src="picture/img2.avif" alt="">
-                <img src="picture/img3.png" alt="">
-
-                <img src="picture/imgPr.avif" alt="">
-                <img src="picture/img2.avif" alt="">
-                <img src="picture/img3.png" alt="">
-
-                <img src="picture/imgPr.avif" alt="">
-                <img src="picture/img2.avif" alt="">
-                <img src="picture/img3.png" alt="">
-
 
             </div>
-        </div>
-    </section>
 
-    <!-- Product  -->
-    <section class="sell" id="product">
-        <h1 class="heading">Our Products</h1>
-        <div class="box-container">
-
-            <div class="box">
-                <div class="icons">
-                    <a href="" class="btn">More Details</a>
-                </div>
-                <div class="image">
-                    <img src="picture/img3.png" alt="">
-                </div>
-                <div class="content">
-                    <h4>IMG1</h4>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-eye"></i>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <a href="" class="btn">More Details</a>
-                </div>
-                <div class="image">
-                    <img src="picture/img2.avif" alt="">
-                </div>
-                <div class="content">
-                    <h4>IMG2</h4>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-eye"></i>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <a href="" class="btn">More Details</a>
-                </div>
-                <div class="image">
-                    <img src="picture/imgPr.avif" alt="">
-                </div>
-                <div class="content">
-                    <h4>IMG3</h4>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-eye"></i>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <a href="" class="btn">More Details</a>
-                </div>
-                <div class="image">
-                    <img src="picture/imgPr.avif" alt="">
-                </div>
-                <div class="content">
-                    <h4>IMG4</h4>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-eye"></i>
-                </div>
-            </div>
+            <div class="swiper-pagination"></div>
 
         </div>
+
     </section>
 
-    <!-- Contanct -->
+    <!-- BRANDS -->
+    <section class="brands">
+
+        <div class="brands-track">
+
+            <!-- SET 1 -->
+            <img src="picture/imgPr.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img2.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img3.png" loading="lazy" alt="Brand">
+
+            <img src="picture/imgPr.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img2.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img3.png" loading="lazy" alt="Brand">
+
+            <!-- SET 2 -->
+            <img src="picture/imgPr.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img2.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img3.png" loading="lazy" alt="Brand">
+
+            <img src="picture/imgPr.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img2.avif" loading="lazy" alt="Brand">
+
+            <img src="picture/img3.png" loading="lazy" alt="Brand">
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+
+        <div class="section-header">
+
+            <span>OUR PRODUCTS</span>
+
+            <h2>Featured Collection</h2>
+
+        </div>
+
+        <div class="products-grid">
+
+            <!-- CARD -->
+            <article class="product-card" data-aos="fade-up">
+
+                <div class="product-image">
+
+                    <img src="picture/img3.png" alt="IMG 1">
+
+                    <div class="product-overlay">
+
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+
+                        <button class="icon-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>IMG 1</h3>
+
+                    <p>Modern premium fashion item.</p>
+
+                    <div class="product-bottom">
+
+                        <span>$49</span>
+
+                        <a href="#" class="btn small">
+                            Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- CARD -->
+            <article class="product-card" data-aos="fade-up">
+
+                <div class="product-image">
+
+                    <img src="picture/img2.avif" alt="IMG 2">
+
+                    <div class="product-overlay">
+
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+
+                        <button class="icon-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>IMG 2</h3>
+
+                    <p>Elegant and minimal design.</p>
+
+                    <div class="product-bottom">
+
+                        <span>$59</span>
+
+                        <a href="#" class="btn small">
+                            Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- CARD -->
+            <article class="product-card" data-aos="fade-up">
+
+                <div class="product-image">
+
+                    <img src="picture/imgPr.avif" alt="IMG 3">
+
+                    <div class="product-overlay">
+
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+
+                        <button class="icon-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-content">
+
+                    <h3>IMG 3</h3>
+
+                    <p>Comfortable and premium material.</p>
+
+                    <div class="product-bottom">
+
+                        <span>$69</span>
+
+                        <a href="#" class="btn small">
+                            Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-image" data-aos="fade-right">
+
+            <img src="picture/imgPr.avif" alt="About Unitex">
+
+        </div>
+
+        <div class="about-content" data-aos="fade-left">
+
+            <span>ABOUT US</span>
+
+            <h2>
+                Modern Fashion
+                With Premium Quality
+            </h2>
+
+            <p>
+                We create premium modern fashion products focused on
+                comfort, elegance and minimalism.
+            </p>
+
+            <a href="#" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
     <section class="contact" id="contact">
-        <h1 class="heading">Contact</h1>
 
-        <div class="row">
-            <div class="image">
-                <div class="i_text">
-                    <h4 style="font-size: 35px; color: #224f34;">Complete Registration</h4>
-                    <p>And Get <span>30%</span> Discount </p>
+        <div class="section-header">
+
+            <span>CONTACT</span>
+
+            <h2>Get In Touch</h2>
+
+        </div>
+
+        <div class="contact-container">
+
+            <form class="contact-form">
+
+                <div class="input-group">
+
+                    <input type="text" placeholder="First Name" required>
+
+                    <input type="text" placeholder="Last Name" required>
+
                 </div>
-            </div>
-            <form action="">
-                <div class="inputBox">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+
+                <div class="input-group">
+
+                    <input type="email" placeholder="Email" required>
+
+                    <input type="tel" placeholder="Phone">
+
                 </div>
-                <div class="inputBox">
-                    <input type="email" placeholder="email address">
-                    <input type="number" placeholder="phone">
-                </div>
-                <textarea name="" id="" placeholder="message"></textarea>
-                <button class="btn">Submit</button>
+
+                <textarea placeholder="Message" required></textarea>
+
+                <button type="submit" class="btn">
+                    Submit
+                </button>
+
             </form>
+
+            <div class="contact-info">
+
+                <div class="info-box">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <div>
+
+                        <h4>Location</h4>
+
+                        <p>Cuenca, Ecuador</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fas fa-phone"></i>
+
+                    <div>
+
+                        <h4>Phone</h4>
+
+                        <p>+593 98 562 6631</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <div>
+
+                        <h4>Email</h4>
+
+                        <p>contact@unitex.com</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/593985626631" class="whatsapp" target="_blank">
 
+        <i class="fab fa-whatsapp"></i>
 
-    <!-- Footer -->
-    <section class="footer">
-        <div class="box-container">
-            <div class="box">
-                <h3>Address</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    labore optio eum, non sapiente totam a et corporis possimus omnis.</p>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>Unitex</h3>
+
+                <p>
+                    Modern premium fashion products with elegant design.
+                </p>
+
             </div>
-            <div class="box">
-                <h3>Email</h3>
-                <a href="" class="link"> nugrasebas2@gmail.com</a>
-                <a href="" class="link"> nugrasebas2@gmail.com</a>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+
+                <a href="#products">Products</a>
+
+                <a href="#contact">Contact</a>
+
             </div>
-            <div class="box">
-                <h3>Phone Number</h3>
-                <p>+593 98 562 6631</p>
-            </div>
-            <div class="box">
-                <h3>Opening Hours</h3>
-                <p>Sat - Tue: 8.00 AM to 6.00 PM <br> Sat - Tue: 9.00 AM to 9.00 PM </p>
-            </div>
+
         </div>
 
-        <div class="share">
-            <a href="" class="fab fa-whatsapp"></a>
+        <div class="footer-bottom">
+
+            © 2026 Unitex. All Rights Reserved.
+
         </div>
-        <div class="credit">All rights | <span>DM 007</span></div>
-    </section>
 
+    </footer>
 
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-    <!-- jquery cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-    <!-- custom js -->
     <script src="./js/script.js"></script>
+
 </body>
 
 </html>
