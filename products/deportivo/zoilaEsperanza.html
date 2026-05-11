@@ -16,36 +16,37 @@
             <img src="../../picture/logoCZ.png" alt="Costuritas Zoe">
         </a>
         <nav class="navbar">
-            <a href="../../index.html">Inicio</a>
-            <a href="../../index.html#products">Productos</a>
-            <a href="../../index.html#location">Ubicación / Contacto</a>
+            <a href="../../index.html" data-i18n="breadcrumb-home">Inicio</a>
+            <a href="../../index.html#products" data-i18n="breadcrumb-products">Productos</a>
+            <a href="../../index.html#location" data-i18n="nav-location-contact">Ubicación / Contacto</a>
+            <button class="lang-btn" id="lang-btn">EN</button>
         </nav>
         <button id="menu-btn">
             <i class="fas fa-bars"></i>
         </button>
     </header>
     <div class="breadcrumb">
-        <a href="../../index.html">Inicio</a> / <a href="../../index.html#products">Productos</a> / <span>Zoila Esperanza Palacios - Deportivo</span>
+        <a href="../../index.html" data-i18n="breadcrumb-home">Inicio</a> / <a href="../../index.html#products" data-i18n="breadcrumb-products">Productos</a> / <span>Zoila Esperanza Palacios - Deportivo</span>
     </div>
     <section class="school-hero" style="background: linear-gradient(135deg, #2c3e50, #1a252f);">
         <div class="overlay"></div>
         <div class="school-hero-content" data-aos="fade-up">
             <h1>U.E. Zoila Esperanza Palacios</h1>
-            <p>Uniforme deportivo para educación física y actividades al aire libre.</p>
+            <p data-i18n="hero-deportivo">Uniforme deportivo para educación física y actividades al aire libre.</p>
 
         </div>
     </section>
     <section class="products" id="uniformes">
         <div class="section-header">
-            <span>COLECCIÓN COMPLETA</span>
-            <h2>Uniforme Deportivo</h2>
+            <span data-i18n="section-complete">COLECCIÓN COMPLETA</span>
+            <h2 data-i18n="section-deportivo">Uniforme Deportivo</h2>
         </div>
         <div class="school-type-toggle">
-            <a href="../casual/zoilaEsperanza.html" class="toggle-btn">Casual</a>
-            <a href="zoilaEsperanza.html" class="toggle-btn active">Deportivo</a>
+            <a href="../casual/zoilaEsperanza.html" class="toggle-btn" data-i18n="product-casual">Casual</a>
+            <a href="zoilaEsperanza.html" class="toggle-btn active" data-i18n="product-deportivo">Deportivo</a>
         </div>
         <a href="../../index.html" class="school-nav">
-            <i class="fas fa-arrow-left"></i> Volver al catálogo
+            <i class="fas fa-arrow-left"></i> <span data-i18n="back-catalog">Volver al catálogo</span>
         </a>
         <div class="products-grid">
             <article class="product-card" data-aos="fade-up">
@@ -75,16 +76,16 @@
         <div class="footer-grid">
             <div>
                 <h3>Costuritas Zoe</h3>
-                <p>Confección y venta de uniformes escolares institucionales. Calidad y compromiso con la educación.</p>
+                <p data-i18n="footer-product-desc">Confección y venta de uniformes escolares institucionales. Calidad y compromiso con la educación.</p>
             </div>
             <div>
-                <h3>Enlaces</h3>
-                <a href="../../index.html">Inicio</a>
-                <a href="../../index.html#products">Productos</a>
-                <a href="../../index.html#location">Ubicación / Contacto</a>
+                <h3 data-i18n="footer-links-title">Enlaces</h3>
+                <a href="../../index.html" data-i18n="breadcrumb-home">Inicio</a>
+                <a href="../../index.html#products" data-i18n="breadcrumb-products">Productos</a>
+                <a href="../../index.html#location" data-i18n="nav-location-contact">Ubicación / Contacto</a>
             </div>
             <div>
-                <h3>Colegios</h3>
+                <h3 data-i18n="footer-schools-title">Colegios</h3>
                 <a href="../casual/manueJCalle.html">Manuel J. Calle</a>
                 <a href="../casual/maryCorile.html">Mary Corilé</a>
                 <a href="../casual/republicaChile.html">República de Chile</a>
@@ -92,13 +93,14 @@
                 <a href="../casual/herlindaToral.html">Herlinda Toral</a>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2026 Costuritas Zoe | Todos los Derechos Reservados.</div>
+        <div class="footer-bottom" data-i18n="footer-product-copyright">&copy; 2026 Costuritas Zoe | Todos los Derechos Reservados.</div>
     </footer>
     <div class="image-modal">
         <span class="close-modal">&times;</span>
         <img class="modal-img" src="" alt="Vista previa">
     </div>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="../../js/i18n.js"></script>
     <script src="../../js/script.js"></script>
 </body>
 </html>
