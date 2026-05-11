@@ -178,6 +178,29 @@ section {
     color: var(--dark);
 }
 
+/* LANGUAGE TOGGLE */
+
+.lang-btn {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: .85rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    transition: all .3s ease;
+    letter-spacing: .5px;
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
 /* HOME */
 
 .home {
@@ -875,6 +898,13 @@ section {
 
     .navbar.active {
         transform: translateX(0);
+    }
+
+    .navbar .lang-btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px 18px;
+        margin-top: .5rem;
     }
 
     .slide {
