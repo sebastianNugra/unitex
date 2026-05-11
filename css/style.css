@@ -555,9 +555,9 @@ section {
     align-items: center;
 }
 
-/* ABOUT */
+/* LOCATION */
 
-.about {
+.location {
 
     display: grid;
 
@@ -570,110 +570,158 @@ section {
     background: var(--secondary);
 }
 
-.about-image img {
-
+.location-map {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
-.about-content span {
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    border: 0;
+    display: block;
+}
+
+.location-content span {
 
     color: var(--primary);
 
     font-weight: 600;
 }
 
-.about-content h2 {
+.location-content h2 {
 
     font-size: 3rem;
 
-    margin: 1rem 0;
+    margin: 1rem 0 1.5rem;
 }
 
-.about-content p {
+.location-content p {
 
     line-height: 1.9;
 
     color: var(--text);
 
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-/* CONTACT */
-
-.contact-container {
-
-    display: grid;
-
-    grid-template-columns: 1fr .8fr;
-
-    gap: 3rem;
-}
-
-.contact-form {
-
-    background: var(--secondary);
-
-    padding: 2rem;
-
-    border-radius: 20px;
-}
-
-.input-group {
-
+.location-info {
     display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
 
+.location-info .info-box {
+    display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-
-    width: 100%;
-
-    padding: 1rem;
-
-    margin-bottom: 1rem;
-
-    border-radius: 10px;
-
-    border: 1px solid var(--border);
-
-    background: var(--white);
-
-    color: var(--dark);
-}
-
-.contact-form textarea {
-
-    min-height: 160px;
-
-    resize: none;
-}
-
-.info-box {
-
-    display: flex;
-
-    gap: 1rem;
-
-    margin-bottom: 2rem;
-}
-
-.info-box i {
-
-    width: 55px;
-
-    height: 55px;
-
+.location-info .info-box i {
+    width: 50px;
+    height: 50px;
     background: var(--primary);
-
     color: white;
-
     border-radius: 50%;
-
     display: grid;
-
     place-items: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.location-info .info-box h4 {
+    font-size: 1rem;
+    margin-bottom: .2rem;
+}
+
+.location-info .info-box p {
+    margin: 0;
+    font-size: .95rem;
+}
+
+/* LOCATION BUTTONS */
+
+.location-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* PRODUCT DUAL BUTTONS */
+
+.product-buttons {
+    display: flex;
+    gap: .6rem;
+}
+
+.product-buttons .btn {
+    padding: 8px 14px;
+    font-size: .8rem;
+    flex: 1;
+    text-align: center;
+}
+
+.product-buttons .btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.product-buttons .btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* SCHOOL TYPE TOGGLE */
+
+.school-type-toggle {
+    display: flex;
+    gap: .6rem;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.toggle-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-size: .9rem;
+    font-weight: 600;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.toggle-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
 }
 
 /* WHATSAPP */
@@ -783,12 +831,16 @@ section {
         font-size: 3.2rem;
     }
 
-    .about {
+    .location {
         grid-template-columns: 1fr;
     }
 
-    .contact-container {
-        grid-template-columns: 1fr;
+    .location-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 }
 
@@ -839,8 +891,13 @@ section {
         font-size: .95rem;
     }
 
-    .input-group {
-        flex-direction: column;
+    .location-content h2 {
+        font-size: 2rem;
+    }
+
+    .location-map,
+    .location-map iframe {
+        min-height: 280px;
     }
 }
 
@@ -919,4 +976,204 @@ section {
     font-size: 40px;
     color: white;
     cursor: pointer;
+}
+
+/* ========== SCHOOL PAGES ========== */
+
+.school-hero {
+    padding: 0;
+    margin-top: 90px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.school-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+    z-index: 1;
+}
+
+.school-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 8%;
+}
+
+.school-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+
+.school-hero-content p {
+    font-size: 1.1rem;
+    opacity: .9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.school-hero-content .btn {
+    margin-top: 1.5rem;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    padding: 1rem 8%;
+    margin-top: 90px;
+    background: var(--secondary);
+    font-size: .9rem;
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--text);
+}
+
+/* PLACEHOLDER for items without image */
+.product-image.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-icon {
+    text-align: center;
+    color: rgba(255, 255, 255, .92);
+}
+
+.placeholder-icon i {
+    font-size: 4rem;
+    margin-bottom: .75rem;
+    display: block;
+}
+
+.placeholder-icon span {
+    font-size: .85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: .8;
+}
+
+/* CATEGORY header on product pages */
+.category-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0 1.5rem;
+    grid-column: 1 / -1;
+}
+
+.category-heading h3 {
+    font-size: 1.4rem;
+    color: var(--dark);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.category-heading .line {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+}
+
+.product-type {
+    font-size: .7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .3rem .7rem;
+    border-radius: 4px;
+    color: white;
+}
+
+.product-type.casual {
+    background: var(--primary);
+}
+
+.product-type.deportivo {
+    background: #e67e22;
+}
+
+/* TAG badge on product card */
+.product-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary);
+    color: white;
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .35rem .85rem;
+    border-radius: 6px;
+    z-index: 3;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+/* SCHOOL NAV (back link) */
+.school-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: .3s;
+}
+
+.school-nav:hover {
+    gap: .75rem;
+}
+
+/* responsive school pages */
+@media(max-width:991px) {
+    .school-hero {
+        height: 320px;
+    }
+    .school-hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media(max-width:768px) {
+    .school-hero {
+        height: 280px;
+    }
+    .school-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .school-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:500px) {
+    .school-hero {
+        height: 240px;
+    }
+    .school-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .placeholder-icon i {
+        font-size: 3rem;
+    }
 }

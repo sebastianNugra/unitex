@@ -1,32 +1,37 @@
-// SWIPER
+// SWIPER — only on pages that have the slider
+const homeSlider = document.querySelector(".home-slider");
 
-new Swiper(".home-slider", {
+if (homeSlider) {
 
-    loop: true,
+    new Swiper(".home-slider", {
 
-    speed: 1200,
+        loop: true,
 
-    autoplay: {
+        speed: 1200,
 
-        delay: 5000,
+        autoplay: {
 
-        disableOnInteraction: false,
-    },
+            delay: 5000,
 
-    effect: "fade",
+            disableOnInteraction: false,
+        },
 
-    fadeEffect: {
-        crossFade: true,
-    },
+        effect: "fade",
 
-    pagination: {
+        fadeEffect: {
+            crossFade: true,
+        },
 
-        el: ".swiper-pagination",
+        pagination: {
 
-        clickable: true,
-    },
+            el: ".swiper-pagination",
 
-});
+            clickable: true,
+        },
+
+    });
+
+}
 
 // MOBILE MENU
 
@@ -34,89 +39,107 @@ const menuBtn = document.getElementById("menu-btn");
 
 const navbar = document.querySelector(".navbar");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn && navbar) {
 
-    navbar.classList.toggle("active");
+    menuBtn.addEventListener("click", () => {
 
-});
-
-// CLOSE MENU
-
-document.querySelectorAll(".navbar a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navbar.classList.remove("active");
+        navbar.classList.toggle("active");
 
     });
 
-});
+    document.querySelectorAll(".navbar a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navbar.classList.remove("active");
+
+        });
+
+    });
+
+}
 
 // AOS
 
-AOS.init({
+if (typeof AOS !== "undefined") {
 
-    duration: 1000,
+    AOS.init({
 
-    once: true,
+        duration: 1000,
 
-});
+        once: true,
+
+    });
+
+}
 
 
-// Abrir Card
+// MODAL — image preview / zoom
+
 const viewButtons = document.querySelectorAll(".view-btn");
 const modal = document.querySelector(".image-modal");
 const modalImg = document.querySelector(".modal-img");
 const closeModal = document.querySelector(".close-modal");
 
-viewButtons.forEach(button => {
+if (modal && modalImg && closeModal) {
 
-    button.addEventListener("click", () => {
+    viewButtons.forEach(button => {
 
-        const img =
-            button.closest(".product-card")
-                .querySelector("img");
+        button.addEventListener("click", () => {
 
-        modalImg.src = img.src;
+            const card = button.closest(".product-card");
 
-        modal.classList.add("active");
+            if (!card) return;
+
+            const img = card.querySelector("img");
+
+            if (!img) return;
+
+            modalImg.src = img.src;
+
+            modal.classList.add("active");
+
+        });
 
     });
 
-});
-
-closeModal.addEventListener("click", () => {
-    modal.classList.remove("active");
-});
-
-modal.addEventListener("click", (e) => {
-
-    if (e.target === modal) {
+    closeModal.addEventListener("click", () => {
         modal.classList.remove("active");
-    }
+        resetZoom();
+    });
 
-});
+    modal.addEventListener("click", (e) => {
 
-// ZOOM IMAGE 
+        if (e.target === modal) {
+            modal.classList.remove("active");
+            resetZoom();
+        }
 
-let zoomed = false;
+    });
 
-modalImg.addEventListener("click", () => {
+    let zoomed = false;
 
-    if (!zoomed) {
+    modalImg.addEventListener("click", () => {
 
-        modalImg.style.transform = "scale(1.8)";
-        modalImg.style.cursor = "zoom-out";
+        if (!zoomed) {
 
-        zoomed = true;
+            modalImg.style.transform = "scale(1.8)";
+            modalImg.style.cursor = "zoom-out";
 
-    } else {
+            zoomed = true;
 
+        } else {
+
+            resetZoom();
+
+        }
+
+    });
+
+    function resetZoom() {
         modalImg.style.transform = "scale(1)";
         modalImg.style.cursor = "zoom-in";
-
         zoomed = false;
-
     }
 
-});
+}
