@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -856,7 +857,7 @@ section {
 
         top: 100%;
 
-        right: -100%;
+        right: 0;
 
         width: 260px;
 
@@ -866,13 +867,14 @@ section {
 
         padding: 2rem;
 
-        transition: .4s;
+        transform: translateX(100%);
+        transition: transform .4s ease;
 
         box-shadow: var(--shadow);
     }
 
     .navbar.active {
-        right: 0;
+        transform: translateX(0);
     }
 
     .slide {
