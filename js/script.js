@@ -85,6 +85,12 @@ function applyTheme(theme) {
     if (themeIcon) {
         themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
     }
+
+    const logo = document.querySelector(".logo img");
+    if (logo) {
+        const dir = logo.src.substring(0, logo.src.lastIndexOf("/") + 1);
+        logo.src = dir + (theme === "dark" ? "CZW.png" : "logoCZ.png");
+    }
 }
 
 const savedTheme = localStorage.getItem("theme") || "light";
