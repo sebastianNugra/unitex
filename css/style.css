@@ -209,6 +209,25 @@ section {
     color: var(--primary);
 }
 
+/* HEADER ACTIONS (always visible, outside hamburger) */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-action-link {
+    color: var(--dark);
+    font-weight: 500;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.header-action-link:hover {
+    color: var(--primary);
+}
+
 #menu-btn {
 
     display: none;
@@ -992,8 +1011,12 @@ section {
         margin-top: .5rem;
     }
 
-    .navbar .theme-btn {
-        margin-top: .5rem;
+    .header-actions {
+        gap: .5rem;
+    }
+
+    .header-actions .header-action-link {
+        font-size: .85rem;
     }
 
     .slide {
