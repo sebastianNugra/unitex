@@ -73,6 +73,30 @@ if (typeof AOS !== "undefined") {
 
 }
 
+// THEME TOGGLE (light / dark)
+
+const themeBtn = document.getElementById("theme-btn");
+const themeIcon = document.getElementById("theme-icon");
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+
+    if (themeIcon) {
+        themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
+    }
+}
+
+const savedTheme = localStorage.getItem("theme") || "light";
+applyTheme(savedTheme);
+
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme") || "light";
+        applyTheme(current === "dark" ? "light" : "dark");
+    });
+}
+
 
 // MODAL — image preview / zoom
 

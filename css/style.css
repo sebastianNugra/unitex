@@ -11,6 +11,46 @@
 
     --shadow:
         0 10px 30px rgba(0, 0, 0, .08);
+
+    --btn-shadow:
+        0 4px 12px rgba(0, 0, 0, .18);
+}
+
+[data-theme="dark"] {
+
+    --primary: #3fa06b;
+    --secondary: #141b24;
+    --dark: #e7edf3;
+    --text: #9aa7b6;
+    --white: #0b1119;
+    --border: #22303f;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, .35);
+
+    --btn-shadow:
+        0 4px 12px rgba(0, 0, 0, .45);
+}
+
+[data-theme="dark"] body {
+    background: var(--white);
+}
+
+[data-theme="dark"] .header {
+    background: rgba(10, 16, 24, .85);
+}
+
+[data-theme="dark"] .navbar {
+    background: #0b1119;
+}
+
+[data-theme="dark"] .footer {
+    background: #06090d;
+}
+
+[data-theme="dark"] .icon-btn {
+    background: var(--secondary);
+    color: var(--dark);
 }
 
 * {
@@ -70,6 +110,8 @@ section {
     color: white;
 
     border-radius: 10px;
+
+    box-shadow: var(--btn-shadow);
 
     transition:
         transform .3s ease,
@@ -194,9 +236,34 @@ section {
     transition: all .3s ease;
     letter-spacing: .5px;
     line-height: 1;
+    box-shadow: var(--btn-shadow);
 }
 
 .lang-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* THEME TOGGLE */
+
+.theme-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: .95rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    transition: all .3s ease;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    box-shadow: var(--btn-shadow);
+}
+
+.theme-btn:hover {
     background: var(--primary);
     color: white;
 }
@@ -551,6 +618,8 @@ section {
 
     place-items: center;
 
+    box-shadow: var(--btn-shadow);
+
     transition: .3s;
 }
 
@@ -577,6 +646,19 @@ section {
     justify-content: space-between;
 
     align-items: center;
+}
+
+.price-note {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.price-note i {
+    font-size: 1rem;
 }
 
 /* LOCATION */
@@ -735,6 +817,7 @@ section {
     transition: all .3s ease;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: var(--btn-shadow);
 }
 
 .toggle-btn:hover {
@@ -904,6 +987,10 @@ section {
         width: 100%;
         text-align: center;
         padding: 10px 18px;
+        margin-top: .5rem;
+    }
+
+    .navbar .theme-btn {
         margin-top: .5rem;
     }
 

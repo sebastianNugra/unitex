@@ -72,6 +72,10 @@ const i18n = {
             /* Footer on product pages */
             "footer-product-desc": "Confección y venta de uniformes escolares institucionales. Calidad y compromiso con la educación.",
             "footer-product-copyright": "© 2026 Costuritas Zoe | Todos los Derechos Reservados.",
+
+            /* Price note */
+            "price-note": "Precio según talla",
+            "theme-toggle": "Cambiar tema",
         },
 
         en: {
@@ -144,6 +148,10 @@ const i18n = {
             /* Footer on product pages */
             "footer-product-desc": "Manufacturing and sale of institutional school uniforms. Quality and commitment to education.",
             "footer-product-copyright": "© 2026 Costuritas Zoe | All Rights Reserved.",
+
+            /* Price note */
+            "price-note": "Price by size",
+            "theme-toggle": "Toggle theme",
         },
     },
 
