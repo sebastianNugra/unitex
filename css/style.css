@@ -37,11 +37,11 @@
 }
 
 [data-theme="dark"] .header {
-    background: rgba(10, 16, 24, .85);
+    background: rgba(34, 44, 56, .85);
 }
 
 [data-theme="dark"] .navbar {
-    background: #0b1119;
+    background: #161f29;
 }
 
 [data-theme="dark"] .footer {
@@ -183,6 +183,8 @@ section {
 
     box-shadow:
         0 5px 20px rgba(0, 0, 0, .05);
+
+    transition: background-color .3s ease;
 }
 
 .logo img {
