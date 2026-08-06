@@ -19,11 +19,11 @@
 [data-theme="dark"] {
 
     --primary: #3fa06b;
-    --secondary: #141b24;
-    --dark: #e7edf3;
-    --text: #9aa7b6;
-    --white: #0b1119;
-    --border: #22303f;
+    --secondary: #1c1c1c;
+    --dark: #e8e8e8;
+    --text: #a3a3a3;
+    --white: #141414;
+    --border: #2b2b2b;
 
     --shadow:
         0 10px 30px rgba(0, 0, 0, .35);
@@ -37,11 +37,11 @@
 }
 
 [data-theme="dark"] .header {
-    background: rgba(34, 44, 56, .85);
+    background: rgba(40, 40, 40, .85);
 }
 
 [data-theme="dark"] .footer {
-    background: #06090d;
+    background: #0a0a0a;
 }
 
 [data-theme="dark"] .icon-btn {
@@ -982,7 +982,7 @@ section {
     }
 
     [data-theme="dark"] .navbar {
-        background: #161f29;
+        background: #1c1c1c;
     }
 
     .navbar .lang-btn {
