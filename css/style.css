@@ -40,10 +40,6 @@
     background: rgba(34, 44, 56, .85);
 }
 
-[data-theme="dark"] .navbar {
-    background: #161f29;
-}
-
 [data-theme="dark"] .footer {
     background: #06090d;
 }
@@ -983,6 +979,10 @@ section {
 
     .navbar.active {
         transform: translateX(0);
+    }
+
+    [data-theme="dark"] .navbar {
+        background: #161f29;
     }
 
     .navbar .lang-btn {
