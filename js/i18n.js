@@ -31,7 +31,6 @@ const i18n = {
             /* Product type buttons */
             "product-casual": "Casual",
             "product-deportivo": "Deportivo",
-            "product-new": "Nuevo",
 
             /* Location */
             "location-span": "UBICACIÓN",
@@ -107,7 +106,6 @@ const i18n = {
             /* Product type buttons */
             "product-casual": "Casual",
             "product-deportivo": "Sports",
-            "product-new": "New",
 
             /* Location */
             "location-span": "LOCATION",

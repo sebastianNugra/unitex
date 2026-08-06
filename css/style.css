@@ -1229,22 +1229,6 @@ section {
     background: #e67e22;
 }
 
-/* TAG badge on product card */
-.product-tag {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: var(--primary);
-    color: white;
-    font-size: .75rem;
-    font-weight: 600;
-    padding: .35rem .85rem;
-    border-radius: 6px;
-    z-index: 3;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-}
-
 /* SCHOOL NAV (back link) */
 .school-nav {
     display: inline-flex;
