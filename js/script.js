@@ -66,16 +66,35 @@ function applyTheme(theme) {
     }
 }
 
-const savedTheme = "light";
+const savedTheme = localStorage.getItem("theme") || "light";
 applyTheme(savedTheme);
 
 if (themeBtn) {
     themeBtn.addEventListener("click", () => {
         const current = document.documentElement.getAttribute("data-theme") || "light";
-        applyTheme(current === "dark" ? "light" : "dark");
+        const next = current === "dark" ? "light" : "dark";
+        localStorage.setItem("theme", next);
+        applyTheme(next);
     });
 }
 
+
+// MOBILE MENU (toggles the header-actions dropdown on mobile)
+
+const menuBtn = document.getElementById("menu-btn");
+const headerActions = document.getElementById("header-actions");
+
+if (menuBtn && headerActions) {
+    menuBtn.addEventListener("click", () => {
+        headerActions.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !headerActions.contains(e.target)) {
+            headerActions.classList.remove("active");
+        }
+    });
+}
 
 // MODAL — image preview / zoom
 
