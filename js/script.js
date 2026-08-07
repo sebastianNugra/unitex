@@ -80,7 +80,6 @@ const themeIcon = document.getElementById("theme-icon");
 
 function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
 
     if (themeIcon) {
         themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
@@ -93,7 +92,7 @@ function applyTheme(theme) {
     }
 }
 
-const savedTheme = localStorage.getItem("theme") || "light";
+const savedTheme = "light";
 applyTheme(savedTheme);
 
 if (themeBtn) {
