@@ -263,7 +263,7 @@ function initTour() {
             window.setTimeout(() => { bubble.style.display = "none"; }, 300);
             current++;
             window.setTimeout(showCallout, 400);
-        }, 4000);
+        }, 2500);
     }
 
     closeBtn.addEventListener("click", () => {
