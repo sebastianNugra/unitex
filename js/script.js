@@ -33,32 +33,6 @@ if (homeSlider) {
 
 }
 
-// MOBILE MENU
-
-const menuBtn = document.getElementById("menu-btn");
-
-const navbar = document.querySelector(".navbar");
-
-if (menuBtn && navbar) {
-
-    menuBtn.addEventListener("click", () => {
-
-        navbar.classList.toggle("active");
-
-    });
-
-    document.querySelectorAll(".navbar a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navbar.classList.remove("active");
-
-        });
-
-    });
-
-}
-
 // AOS
 
 if (typeof AOS !== "undefined") {
