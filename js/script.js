@@ -223,8 +223,6 @@ function initTour() {
         const el = typeof target === "string" ? document.querySelector(target) : target;
         if (!el) return;
 
-        el.scrollIntoView({ behavior: "smooth", block: "center" });
-
         const rect = el.getBoundingClientRect();
         const pad = 8;
 
@@ -233,21 +231,26 @@ function initTour() {
             0 0 0 ${pad}px rgba(255, 255, 255, .18)
         `;
 
-        window.clearTimeout(positionOn._t);
-        positionOn._t = window.setTimeout(() => {
+        let top = rect.bottom + 14;
+        let left = rect.left + rect.width / 2 - 150;
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
 
-            const r = el.getBoundingClientRect();
+        if (left < 12) left = 12;
+        if (left + 300 > vw - 12) left = vw - 312;
 
-            tooltip.style.top = (r.bottom + 14) + "px";
+        if (rect.bottom + 14 + 140 > vh) {
+            top = rect.top - 14 - 140;
+        }
 
-            let left = r.left + r.width / 2 - 150;
-            const vw = window.innerWidth;
-            if (left < 12) left = 12;
-            if (left + 300 > vw - 12) left = vw - 312;
+        tooltip.style.top = top + "px";
+        tooltip.style.left = left + "px";
+        tooltip.classList.add("visible");
+    }
 
-            tooltip.style.left = left + "px";
-            tooltip.classList.add("visible");
-        }, 350);
+    function scrollTo(target) {
+        const el = typeof target === "string" ? document.querySelector(target) : target;
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
     function render() {
@@ -256,7 +259,10 @@ function initTour() {
         descEl.textContent = step.desc;
         btnOk.textContent = current === steps.length - 1 ? i18n.t("tour-finish") : i18n.t("tour-next");
         btnSkip.textContent = i18n.t("tour-skip");
-        positionOn(step.target);
+        scrollTo(step.target);
+        window.setTimeout(() => {
+            positionOn(step.target);
+        }, 500);
     }
 
     function finish() {
