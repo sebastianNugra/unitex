@@ -166,7 +166,7 @@ if (modal && modalImg && closeModal) {
 
 }
 
-// TOUR — first-time guided tour (index.html only)
+// TOUR — first-time scroll-triggered tips (index.html only)
 
 const TOUR_KEY = "tour-visto";
 
@@ -177,128 +177,119 @@ function initTour() {
 
     if (localStorage.getItem(TOUR_KEY)) return;
 
-    const steps = [
+    const callouts = [
         {
-            target: ".logo",
-            title: i18n.t("tour-welcome-title"),
-            desc: i18n.t("tour-welcome-desc"),
+            target: ".product-card .view-btn",
+            title: i18n.t("tour-eye-title"),
+            desc: i18n.t("tour-eye-desc"),
         },
         {
-            target: "#products",
-            title: i18n.t("tour-products-title"),
-            desc: i18n.t("tour-products-desc"),
+            target: ".product-card .product-buttons",
+            title: i18n.t("tour-catalog-title"),
+            desc: i18n.t("tour-catalog-desc"),
         },
         {
-            target: "#location",
+            target: ".location-buttons .btn",
             title: i18n.t("tour-location-title"),
             desc: i18n.t("tour-location-desc"),
         },
     ];
 
-    const overlay = document.createElement("div");
-    overlay.className = "tour-overlay";
+    let current = 0;
+    let showing = false;
 
-    const tooltip = document.createElement("div");
-    tooltip.className = "tour-tooltip";
-    tooltip.innerHTML = `
+    const bubble = document.createElement("div");
+    bubble.className = "tour-bubble";
+    bubble.innerHTML = `
+        <button class="tour-bubble-close" aria-label="Cerrar">&times;</button>
         <h4 class="tour-title"></h4>
         <p class="tour-desc"></p>
-        <div class="tour-nav">
-            <button class="tour-btn tour-skip"></button>
-            <button class="tour-btn tour-ok"></button>
-        </div>
     `;
+    document.body.appendChild(bubble);
 
-    document.body.appendChild(overlay);
-    document.body.appendChild(tooltip);
+    const titleEl = bubble.querySelector(".tour-title");
+    const descEl = bubble.querySelector(".tour-desc");
+    const closeBtn = bubble.querySelector(".tour-bubble-close");
 
-    const titleEl = tooltip.querySelector(".tour-title");
-    const descEl = tooltip.querySelector(".tour-desc");
-    const btnSkip = tooltip.querySelector(".tour-skip");
-    const btnOk = tooltip.querySelector(".tour-ok");
+    let hideTimer = null;
+    let currentEl = null;
+    let dismissed = false;
 
-    let current = 0;
+    function position() {
+        if (!showing || !currentEl) return;
+        const r = currentEl.getBoundingClientRect();
+        if (r.width === 0 && r.height === 0) return;
 
-    function positionOn(target) {
-        const el = typeof target === "string" ? document.querySelector(target) : target;
-        if (!el) return;
+        bubble.style.display = "block";
+        bubble.classList.add("visible");
 
-        const rect = el.getBoundingClientRect();
-        const pad = 8;
+        const bw = bubble.offsetWidth;
+        const bh = bubble.offsetHeight;
 
-        overlay.style.boxShadow = `
-            0 0 0 9999px rgba(0, 0, 0, .55),
-            0 0 0 ${pad}px rgba(255, 255, 255, .18)
-        `;
+        let top = r.bottom + 12;
+        let left = r.left + r.width / 2 - bw / 2;
 
-        let top = rect.bottom + 14;
-        let left = rect.left + rect.width / 2 - 150;
-        const vw = window.innerWidth;
-        const vh = window.innerHeight;
-
-        if (left < 12) left = 12;
-        if (left + 300 > vw - 12) left = vw - 312;
-
-        if (rect.bottom + 14 + 140 > vh) {
-            top = rect.top - 14 - 140;
+        if (top + bh > window.innerHeight) {
+            top = r.top - bh - 12;
         }
+        if (left < 10) left = 10;
+        if (left + bw > window.innerWidth - 10) left = window.innerWidth - bw - 10;
 
-        tooltip.style.top = top + "px";
-        tooltip.style.left = left + "px";
-        tooltip.classList.add("visible");
+        bubble.style.top = top + "px";
+        bubble.style.left = left + "px";
     }
 
-    function scrollTo(target) {
-        const el = typeof target === "string" ? document.querySelector(target) : target;
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    function showCallout() {
+        if (current >= callouts.length) { finish(); return; }
+        if (showing) return;
+
+        const callout = callouts[current];
+        currentEl = document.querySelector(callout.target);
+        if (!currentEl) { current++; showCallout(); return; }
+
+        const r = currentEl.getBoundingClientRect();
+        const inView = r.top < window.innerHeight * 0.75 && r.bottom > 0;
+        if (!inView) return;
+
+        showing = true;
+        titleEl.textContent = callout.title;
+        descEl.textContent = callout.desc;
+        position();
+
+        window.clearTimeout(hideTimer);
+        hideTimer = window.setTimeout(() => {
+            showing = false;
+            bubble.classList.remove("visible");
+            window.setTimeout(() => { bubble.style.display = "none"; }, 300);
+            current++;
+            window.setTimeout(showCallout, 400);
+        }, 6000);
     }
 
-    function render() {
-        const step = steps[current];
-        titleEl.textContent = step.title;
-        descEl.textContent = step.desc;
-        btnOk.textContent = current === steps.length - 1 ? i18n.t("tour-finish") : i18n.t("tour-next");
-        btnSkip.textContent = i18n.t("tour-skip");
-        scrollTo(step.target);
-        window.setTimeout(() => {
-            positionOn(step.target);
-        }, 500);
+    closeBtn.addEventListener("click", () => {
+        showing = false;
+        bubble.classList.remove("visible");
+        window.setTimeout(() => { bubble.style.display = "none"; }, 300);
+        current++;
+        showCallout();
+    });
+
+    function onScroll() {
+        position();
+        showCallout();
     }
 
     function finish() {
         localStorage.setItem(TOUR_KEY, "1");
-        overlay.remove();
-        tooltip.remove();
-        document.removeEventListener("keydown", onKey);
+        bubble.remove();
         window.removeEventListener("scroll", onScroll);
         window.removeEventListener("resize", onScroll);
     }
 
-    function onKey(e) {
-        if (e.key === "Escape") finish();
-    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
 
-    function onScroll() {
-        const step = steps[current];
-        const el = document.querySelector(step.target);
-        if (el) positionOn(el);
-    }
-
-    btnSkip.addEventListener("click", finish);
-    btnOk.addEventListener("click", () => {
-        if (current < steps.length - 1) {
-            current++;
-            render();
-        } else {
-            finish();
-        }
-    });
-
-    document.addEventListener("keydown", onKey);
-    window.addEventListener("scroll", onScroll, true);
-    window.addEventListener("resize", onScroll);
-
-    render();
+    showCallout();
 
 }
 

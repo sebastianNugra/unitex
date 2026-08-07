@@ -139,12 +139,12 @@ const i18n = {
             "desc-dzo-buso": "Buso deportivo color gris con detalles en azul marino. Forro interior suave, ideal para días fríos y actividades al aire libre.",
 
             /* Tour */
-            "tour-welcome-title": "Bienvenido a Costuritas Zoe",
-            "tour-welcome-desc": "Usa el menú superior para navegar por la página.",
-            "tour-products-title": "Explora los uniformes",
-            "tour-products-desc": "Aquí encontrarás los uniformes organizados por colegio.",
-            "tour-location-title": "Encuéntranos",
-            "tour-location-desc": "Al final de la página verás nuestra ubicación y datos de contacto.",
+            "tour-eye-title": "Vista previa del uniforme",
+            "tour-eye-desc": "Pulsa el ojito para ver el uniforme en grande.",
+            "tour-catalog-title": "Catálogo completo",
+            "tour-catalog-desc": "Pulsa el botón para abrir todo el catálogo de esta institución.",
+            "tour-location-title": "Cómo llegar",
+            "tour-location-desc": "Pulsa este botón para ir directo a la ubicación del local.",
             "tour-next": "Siguiente",
             "tour-skip": "Saltar",
             "tour-finish": "Listo",
@@ -286,16 +286,16 @@ const i18n = {
 "desc-dzo-polo": "Navy blue polo shirt with white collar and trim. Ideal for physical education and sports activities.",
             "desc-dzo-buso": "Navy blue sports hoodie with white trim. Soft inner lining, ideal for cold days and outdoor activities.",
 
-            /* Tour */
-            "tour-welcome-title": "Welcome to Costuritas Zoe",
-            "tour-welcome-desc": "Use the top menu to navigate the page.",
-            "tour-products-title": "Explore the uniforms",
-            "tour-products-desc": "Here you'll find the uniforms organized by school.",
-            "tour-location-title": "Find us",
-            "tour-location-desc": "At the bottom of the page you'll see our location and contact details.",
+/* Tour */
+            "tour-eye-title": "Uniform preview",
+            "tour-eye-desc": "Click the eye to see the uniform in full size.",
+            "tour-catalog-title": "Full catalog",
+            "tour-catalog-desc": "Click the button to open the whole catalog for this school.",
+            "tour-location-title": "Directions",
+            "tour-location-desc": "Click this button to go straight to the store location.",
             "tour-next": "Next",
             "tour-skip": "Skip",
-"tour-finish": "Done",
+            "tour-finish": "Done",
         },
     },
 
