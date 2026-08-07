@@ -166,9 +166,12 @@ if (modal && modalImg && closeModal) {
 
 }
 
-// TOUR — first-time scroll-triggered tips (index.html only)
+// TOUR — first-time scroll-triggered glow highlights (index.html only)
 
 const TOUR_KEY = "tour-visto";
+const TOUR_HIGHLIGHT_CLASS = "tour-glow";
+const TOUR_LABEL_CLASS = "tour-label";
+const TOUR_DURATION = 3000;
 
 function initTour() {
 
@@ -180,63 +183,35 @@ function initTour() {
     const callouts = [
         {
             target: ".product-card .view-btn",
-            title: i18n.t("tour-eye-title"),
-            desc: i18n.t("tour-eye-desc"),
+            text: i18n.t("tour-eye-desc"),
         },
         {
             target: ".product-card .product-buttons",
-            title: i18n.t("tour-catalog-title"),
-            desc: i18n.t("tour-catalog-desc"),
+            text: i18n.t("tour-catalog-desc"),
         },
         {
             target: ".location-buttons .btn",
-            title: i18n.t("tour-location-title"),
-            desc: i18n.t("tour-location-desc"),
+            text: i18n.t("tour-location-desc"),
         },
     ];
 
     let current = 0;
     let showing = false;
-
-    const bubble = document.createElement("div");
-    bubble.className = "tour-bubble";
-    bubble.innerHTML = `
-        <button class="tour-bubble-close" aria-label="Cerrar">&times;</button>
-        <h4 class="tour-title"></h4>
-        <p class="tour-desc"></p>
-    `;
-    document.body.appendChild(bubble);
-
-    const titleEl = bubble.querySelector(".tour-title");
-    const descEl = bubble.querySelector(".tour-desc");
-    const closeBtn = bubble.querySelector(".tour-bubble-close");
-
-    let hideTimer = null;
     let currentEl = null;
-    let dismissed = false;
+    let glowTimer = null;
+    let label = null;
 
-    function position() {
-        if (!showing || !currentEl) return;
+    function positionLabel() {
+        if (!currentEl || !label) return;
         const r = currentEl.getBoundingClientRect();
         if (r.width === 0 && r.height === 0) return;
-
-        bubble.style.display = "block";
-        bubble.classList.add("visible");
-
-        const bw = bubble.offsetWidth;
-        const bh = bubble.offsetHeight;
-
-        let top = r.bottom + 12;
-        let left = r.left + r.width / 2 - bw / 2;
-
-        if (top + bh > window.innerHeight) {
-            top = r.top - bh - 12;
-        }
+        let top = r.bottom + 10;
+        let left = r.left + r.width / 2 - label.offsetWidth / 2;
         if (left < 10) left = 10;
-        if (left + bw > window.innerWidth - 10) left = window.innerWidth - bw - 10;
-
-        bubble.style.top = top + "px";
-        bubble.style.left = left + "px";
+        const maxLeft = window.innerWidth - label.offsetWidth - 10;
+        if (left > maxLeft) left = maxLeft;
+        label.style.top = top + "px";
+        label.style.left = left + "px";
     }
 
     function showCallout() {
@@ -248,40 +223,40 @@ function initTour() {
         if (!currentEl) { current++; showCallout(); return; }
 
         const r = currentEl.getBoundingClientRect();
-        const inView = r.top < window.innerHeight * 0.75 && r.bottom > 0;
+        const inView = r.top < window.innerHeight * 0.8 && r.bottom > 0;
         if (!inView) return;
 
         showing = true;
-        titleEl.textContent = callout.title;
-        descEl.textContent = callout.desc;
-        position();
 
-        window.clearTimeout(hideTimer);
-        hideTimer = window.setTimeout(() => {
+        if (!label) {
+            label = document.createElement("span");
+            label.className = TOUR_LABEL_CLASS;
+            document.body.appendChild(label);
+        }
+        label.textContent = callout.text;
+        positionLabel();
+        label.classList.add("visible");
+
+        currentEl.classList.add(TOUR_HIGHLIGHT_CLASS);
+
+        window.clearTimeout(glowTimer);
+        glowTimer = window.setTimeout(() => {
+            currentEl.classList.remove(TOUR_HIGHLIGHT_CLASS);
+            label.classList.remove("visible");
             showing = false;
-            bubble.classList.remove("visible");
-            window.setTimeout(() => { bubble.style.display = "none"; }, 300);
             current++;
-            window.setTimeout(showCallout, 400);
-        }, 2500);
+            window.setTimeout(showCallout, 350);
+        }, TOUR_DURATION);
     }
 
-    closeBtn.addEventListener("click", () => {
-        showing = false;
-        bubble.classList.remove("visible");
-        window.setTimeout(() => { bubble.style.display = "none"; }, 300);
-        current++;
-        showCallout();
-    });
-
     function onScroll() {
-        position();
+        if (showing) positionLabel();
         showCallout();
     }
 
     function finish() {
         localStorage.setItem(TOUR_KEY, "1");
-        bubble.remove();
+        if (label) label.remove();
         window.removeEventListener("scroll", onScroll);
         window.removeEventListener("resize", onScroll);
     }
