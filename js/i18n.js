@@ -137,6 +137,17 @@ const i18n = {
             /* Product descriptions - deporte zoila */
             "desc-dzo-polo": "Polo color azul marino con cuello y ribetes blancos. Ideal para educación física y actividades deportivas.",
             "desc-dzo-buso": "Buso deportivo color gris con detalles en azul marino. Forro interior suave, ideal para días fríos y actividades al aire libre.",
+
+            /* Tour */
+            "tour-welcome-title": "Bienvenido a Costuritas Zoe",
+            "tour-welcome-desc": "Usa el menú superior para navegar por la página.",
+            "tour-products-title": "Explora los uniformes",
+            "tour-products-desc": "Aquí encontrarás los uniformes organizados por colegio.",
+            "tour-location-title": "Encuéntranos",
+            "tour-location-desc": "Al final de la página verás nuestra ubicación y datos de contacto.",
+            "tour-next": "Siguiente",
+            "tour-skip": "Saltar",
+            "tour-finish": "Listo",
         },
 
         en: {
@@ -272,8 +283,19 @@ const i18n = {
             "desc-drep-buso": "Gray sports hoodie with red details. Soft inner lining, ideal for cold days and outdoor activities.",
 
             /* Product descriptions - sport zoila */
-            "desc-dzo-polo": "Navy blue polo shirt with white collar and trim. Ideal for physical education and sports activities.",
-            "desc-dzo-buso": "Gray sports hoodie with navy blue details. Soft inner lining, ideal for cold days and outdoor activities.",
+"desc-dzo-polo": "Navy blue polo shirt with white collar and trim. Ideal for physical education and sports activities.",
+            "desc-dzo-buso": "Navy blue sports hoodie with white trim. Soft inner lining, ideal for cold days and outdoor activities.",
+
+            /* Tour */
+            "tour-welcome-title": "Welcome to Costuritas Zoe",
+            "tour-welcome-desc": "Use the top menu to navigate the page.",
+            "tour-products-title": "Explore the uniforms",
+            "tour-products-desc": "Here you'll find the uniforms organized by school.",
+            "tour-location-title": "Find us",
+            "tour-location-desc": "At the bottom of the page you'll see our location and contact details.",
+            "tour-next": "Next",
+            "tour-skip": "Skip",
+"tour-finish": "Done",
         },
     },
 

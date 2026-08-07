@@ -165,3 +165,139 @@ if (modal && modalImg && closeModal) {
     }
 
 }
+
+// TOUR — first-time guided tour (index.html only)
+
+const TOUR_KEY = "tour-visto";
+
+function initTour() {
+
+    const productsSection = document.getElementById("products");
+    if (!productsSection) return;
+
+    if (localStorage.getItem(TOUR_KEY)) return;
+
+    const steps = [
+        {
+            target: ".logo",
+            title: i18n.t("tour-welcome-title"),
+            desc: i18n.t("tour-welcome-desc"),
+        },
+        {
+            target: "#products",
+            title: i18n.t("tour-products-title"),
+            desc: i18n.t("tour-products-desc"),
+        },
+        {
+            target: "#location",
+            title: i18n.t("tour-location-title"),
+            desc: i18n.t("tour-location-desc"),
+        },
+    ];
+
+    const overlay = document.createElement("div");
+    overlay.className = "tour-overlay";
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "tour-tooltip";
+    tooltip.innerHTML = `
+        <h4 class="tour-title"></h4>
+        <p class="tour-desc"></p>
+        <div class="tour-nav">
+            <button class="tour-btn tour-skip"></button>
+            <button class="tour-btn tour-ok"></button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+    document.body.appendChild(tooltip);
+
+    const titleEl = tooltip.querySelector(".tour-title");
+    const descEl = tooltip.querySelector(".tour-desc");
+    const btnSkip = tooltip.querySelector(".tour-skip");
+    const btnOk = tooltip.querySelector(".tour-ok");
+
+    let current = 0;
+
+    function positionOn(target) {
+        const el = typeof target === "string" ? document.querySelector(target) : target;
+        if (!el) return;
+
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        const rect = el.getBoundingClientRect();
+        const pad = 8;
+
+        overlay.style.boxShadow = `
+            0 0 0 9999px rgba(0, 0, 0, .55),
+            0 0 0 ${pad}px rgba(255, 255, 255, .18)
+        `;
+
+        window.clearTimeout(positionOn._t);
+        positionOn._t = window.setTimeout(() => {
+
+            const r = el.getBoundingClientRect();
+
+            tooltip.style.top = (r.bottom + 14) + "px";
+
+            let left = r.left + r.width / 2 - 150;
+            const vw = window.innerWidth;
+            if (left < 12) left = 12;
+            if (left + 300 > vw - 12) left = vw - 312;
+
+            tooltip.style.left = left + "px";
+            tooltip.classList.add("visible");
+        }, 350);
+    }
+
+    function render() {
+        const step = steps[current];
+        titleEl.textContent = step.title;
+        descEl.textContent = step.desc;
+        btnOk.textContent = current === steps.length - 1 ? i18n.t("tour-finish") : i18n.t("tour-next");
+        btnSkip.textContent = i18n.t("tour-skip");
+        positionOn(step.target);
+    }
+
+    function finish() {
+        localStorage.setItem(TOUR_KEY, "1");
+        overlay.remove();
+        tooltip.remove();
+        document.removeEventListener("keydown", onKey);
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+    }
+
+    function onKey(e) {
+        if (e.key === "Escape") finish();
+    }
+
+    function onScroll() {
+        const step = steps[current];
+        const el = document.querySelector(step.target);
+        if (el) positionOn(el);
+    }
+
+    btnSkip.addEventListener("click", finish);
+    btnOk.addEventListener("click", () => {
+        if (current < steps.length - 1) {
+            current++;
+            render();
+        } else {
+            finish();
+        }
+    });
+
+    document.addEventListener("keydown", onKey);
+    window.addEventListener("scroll", onScroll, true);
+    window.addEventListener("resize", onScroll);
+
+    render();
+
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initTour);
+} else {
+    initTour();
+}
