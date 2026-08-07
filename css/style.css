@@ -13,7 +13,7 @@
         0 10px 30px rgba(0, 0, 0, .08);
 
     --btn-shadow:
-        0 4px 12px rgba(0, 0, 0, .18);
+        0 6px 20px rgba(0, 0, 0, .35);
 }
 
 [data-theme="dark"] {
@@ -29,7 +29,7 @@
         0 10px 30px rgba(0, 0, 0, .35);
 
     --btn-shadow:
-        0 4px 12px rgba(0, 0, 0, .45);
+        0 6px 20px rgba(0, 0, 0, .6);
 }
 
 [data-theme="dark"] body {
