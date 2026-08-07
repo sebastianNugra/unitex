@@ -26,7 +26,6 @@ const i18n = {
             "mary-corile-desc": "Chompa de color azul marino con cuello en V, destinada para uso académico e institucional.",
             "manuel-calle-desc": "Diseño institucional en color lacre y negro, elaborado para actividades académicas y actos oficiales.",
             "zoila-desc": "Uniformes institucionales completos. Diseño en azul y blanco, para actividades académicas y deportivas.",
-            "herlinda-desc": "Uniformes institucionales completos. Diseño en morado y blanco, para actividades académicas y deportivas.",
 
             /* Product type buttons */
             "product-casual": "Casual",
@@ -65,7 +64,6 @@ const i18n = {
             "hero-casual-mary": "Uniforme casual para actos oficiales y académicos. Diseño en azul marino.",
             "hero-casual-manuel": "Uniforme casual para actos oficiales y académicos. Diseño en color lacre y negro.",
             "hero-casual-zoila": "Uniforme casual para actos oficiales y académicos. Diseño en azul y blanco.",
-            "hero-casual-herlinda": "Uniforme casual para actos oficiales y académicos. Diseño en morado y blanco.",
             "hero-deportivo": "Uniforme deportivo para educación física y actividades al aire libre.",
 
             /* Footer on product pages */
@@ -76,73 +74,66 @@ const i18n = {
             "price-note": "Precio según talla",
             "theme-toggle": "Cambiar tema",
 
-            /* Product descriptions - herlinda */
-            "desc-her-chompa": "Chompa institucional color morado con cuello en V, ribetes blancos y escudo bordado de la institución. Ideal para actos oficiales y académicos.",
-            "desc-her-pantalon": "Pantalón de vestir color gris oscuro, tela de gabardina. Corte clásico recto, cómodo y resistente para uso diario.",
-            "desc-her-camisa": "Camisa blanca formal de manga larga, cuello ejecutivo. Confeccionada en algodón y poliéster para máxima comodidad.",
-            "desc-her-zapatos": "Zapatos negros de vestir, estilo colegial. Suela antideslizante y material de cuero sintético de alta resistencia.",
-            "desc-her-corbata": "Corbata institucional color morado con detalles blancos. Confeccionada en poliéster de alto brillo y durabilidad.",
-            "desc-her-medias": "Medias institucionales color morado con detalles blancos. Tejido suave y resistente para uso diario.",
-
-            /* Product descriptions - manuel */
-            "desc-man-chompa": "Diseño institucional en color lacre y negro, cuello en V, con el escudo bordado de la institución. Ideal para actividades académicas y actos oficiales.",
-            "desc-man-pantalon": "Pantalón de vestir color negro, tela de gabardina de alta durabilidad. Corte clásico recto, cómodo para uso diario.",
-            "desc-man-camisa": "Camisa blanca formal de manga larga, cuello semi ejecutivo. Confeccionada en algodón y poliéster para mayor confort.",
-            "desc-man-zapatos": "Zapatos negros de vestir, estilo colegial. Suela antideslizante y material de cuero sintético de alta resistencia.",
-            "desc-man-corbata": "Corbata institucional color lacre con detalles en negro. Confeccionada en poliéster de alto brillo y durabilidad.",
-            "desc-man-medias": "Medias institucionales color lacre y negro. Tejido suave y resistente para uso diario.",
+/* Product descriptions - manuel */
+            "desc-man-casaca": "Casaca institucional en color lacre y negro, con el escudo bordado de la institución. Ideal para actos oficiales y académicos.",
+            "desc-man-polo": "Camisa polo en color lacre con cuello y ribetes negros. Confeccionada en algodón piqué de alta durabilidad.",
+            "desc-man-camisa-hombre": "Camisa blanca formal de manga larga para hombre, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-man-blusa-mujer": "Blusa blanca formal de manga larga y corta para mujer, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-man-pantalon": "Pantalón de tela color negro, gabardina de alta durabilidad. Corte clásico recto, cómodo para uso diario.",
+            "desc-man-falda": "Falda de tela institucional color negro, corte tableado. Confeccionada en gabardina de alta durabilidad.",
 
             /* Product descriptions - mary */
-            "desc-mary-chompa": "Chompa de color azul marino con cuello en V, con el escudo bordado de la institución. Destinada para uso académico e institucional.",
-            "desc-mary-pantalon": "Pantalón de vestir color azul marino, tela de gabardina. Corte clásico recto, cómodo y resistente para el uso diario.",
-            "desc-mary-camisa": "Camisa blanca formal de manga larga, cuello ejecutivo. Confeccionada en algodón y poliéster para máxima comodidad.",
-            "desc-mary-falda": "Falda institucional tableada color azul marino. Confeccionada en tela de gabardina, con pliegues y cintura ajustable.",
-            "desc-mary-zapatos": "Zapatos negros de vestir, estilo colegial. Suela antideslizante y material de cuero sintético.",
-            "desc-mary-corbata": "Corbata institucional color azul marino con detalles. Confeccionada en poliéster de alto brillo y durabilidad.",
-            "desc-mary-medias": "Medias institucionales color azul marino. Tejido suave y resistente para uso diario.",
+            "desc-mary-chompa": "Chompa tejida de color azul marino con cuello en V y el escudo bordado de la institución. Destinada para uso académico e institucional.",
+            "desc-mary-polo": "Camisa polo azul marino con cuello y ribetes blancos. Confeccionada en algodón piqué de alta durabilidad.",
+            "desc-mary-camisa-hombre": "Camisa blanca formal de manga larga para hombre, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-mary-blusa-mujer": "Blusa blanca formal para mujer, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-mary-pantalon": "Pantalón de tela color azul marino, en gabardina. Corte clásico recto, cómodo y resistente.",
+            "desc-mary-falda": "Falda de tela institucional tableada color azul marino, con cintura ajustable y pliegues.",
 
             /* Product descriptions - republica de chile */
-            "desc-rep-chompa": "Chompa institucional color rojo con cuello en V, aplicado el nuevo escudo institucional. Ideal para actividades académicas y actos oficiales.",
-            "desc-rep-pantalon": "Pantalón de vestir color gris plomo, tela de gabardina. Corte clásico recto, cómodo y resistente para uso diario.",
-            "desc-rep-camisa": "Camisa blanca formal de manga larga, cuello ejecutivo. Confeccionada en algodón y poliéster para máxima comodidad.",
-            "desc-rep-chaleco": "Chaleco institucional color rojo con bordes blancos. Confeccionado en tela de alta durabilidad y confort.",
-            "desc-rep-zapatos": "Zapatos negros de vestir, estilo colegial. Suela antideslizante y material de cuero sintético de alta resistencia.",
-            "desc-rep-corbata": "Corbata institucional color rojo con detalles. Confeccionada en poliéster de alto brillo y durabilidad.",
-            "desc-rep-medias": "Medias institucionales color rojo con detalles blancos. Tejido suave y resistente para uso diario.",
+            "desc-rep-chompa": "Chompa tejida institucional color rojo con cuello en V, aplicado el escudo institucional. Ideal para actos oficiales y académicos.",
+            "desc-rep-camisa-hombre": "Camisa blanca formal de manga larga para hombre, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-rep-blusa-mujer": "Blusa blanca formal para mujer, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-rep-pantalon": "Pantalón de tela color gris plomo, en gabardina. Corte clásico recto, cómodo y resistente.",
+            "desc-rep-falda": "Falda de tela tableada institucional color gris plomo, con cintura ajustable.",
 
             /* Product descriptions - zoila */
-            "desc-zo-chompa": "Chompa institucional color azul marino con cuello en V, ribetes blancos y escudo bordado de la institución. Ideal para actos oficiales y académicos.",
-            "desc-zo-pantalon": "Pantalón de vestir color azul marino, tela de gabardina. Corte clásico recto, cómodo y resistente para uso diario.",
-            "desc-zo-camisa": "Camisa blanca formal de manga larga, cuello ejecutivo. Confeccionada en algodón y poliéster para máxima comodidad.",
-            "desc-zo-zapatos": "Zapatos negros de vestir, estilo colegial. Suela antideslizante y material de cuero sintético de alta resistencia.",
-            "desc-zo-corbata": "Corbata institucional color azul marino con detalles blancos. Confeccionada en poliéster de alto brillo y durabilidad.",
-            "desc-zo-medias": "Medias institucionales color azul marino con detalles blancos. Tejido suave y resistente para uso diario.",
-
-            /* Product descriptions - deportivo herlinda */
-            "desc-dher-polo": "Polo color morado con cuello y ribetes blancos. Ideal para educación física y actividades deportivas.",
-            "desc-dher-buso": "Buso deportivo color gris con detalles en morado. Forro interior suave, ideal para días fríos y actividades al aire libre.",
+            "desc-zo-chompa": "Chompa tejida institucional color azul marino con cuello en V, ribetes blancos y escudo bordado de la institución.",
+            "desc-zo-falda": "Falda de tela tableada color azul marino, con cintura ajustable y tela de gabardina.",
+            "desc-zo-camisa-hombre": "Camisa blanca formal de manga larga para hombre, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-zo-blusa-mujer": "Blusa blanca formal para mujer, cuello ejecutivo. Confeccionada en algodón y poliéster.",
+            "desc-zo-pantalon": "Pantalón de tela color azul marino, en gabardina. Corte clásico recto, cómodo y resistente.",
 
             /* Product descriptions - deporte manuel */
-            "desc-dman-polo": "Polo color lacre con cuello y ribetes negros. Ideal para educación física y actividades deportivas.",
-            "desc-dman-buso": "Buso deportivo color gris oscuro con detalles en lacre. Forro interior suave, ideal para días fríos y actividades al aire libre.",
+            "desc-dman-camiseta": "Camiseta deportiva color lacre con cuello y ribetes negros. Ideal para educación física y actividades deportivas.",
+            "desc-dman-pantaloneta": "Pantaloneta deportiva color negro con detalles en lacre. Ideal para educación física.",
+            "desc-dman-short": "Short deportivo color negro con detalles en lacre. Cómodo y ligero para actividades deportivas.",
+            "desc-dman-pantalon": "Pantalón deportivo color gris oscuro con detalles en lacre. Forro interior suave, ideal para días fríos.",
+            "desc-dman-chompa": "Chompa deportiva color gris oscuro con detalles en lacre. Cómoda para el abrigo en actividades deportivas.",
 
             /* Product descriptions - deporte mary */
-            "desc-dmary-polo": "Polo color azul marino con cuello y ribetes blancos. Ideal para educación física y actividades deportivas.",
-            "desc-dmary-buso": "Buso deportivo color gris con detalles en azul marino. Forro interior suave, ideal para días fríos.",
+            "desc-dmary-pantaloneta": "Pantaloneta deportiva color azul marino con detalles en blanco. Ideal para educación física.",
+            "desc-dmary-short": "Short deportivo azul marino con detalles en blanco. Cómodo y ligero para actividades deportivas.",
+            "desc-dmary-pantalon": "Pantalón deportivo color gris con detalles en azul marino. Ideal para actividades al aire libre.",
+            "desc-dmary-chompa": "Chompa deportiva color gris con detalles en azul marino. Ideal para el abrigo en actividades deportivas.",
 
             /* Product descriptions - deporte republica */
-            "desc-drep-polo": "Polo color rojo institucional con cuello blanco. Ideal para educación física y actividades deportivas.",
-            "desc-drep-buso": "Buso deportivo color gris con detalles en rojo. Forro interior suave, ideal para días fríos y actividades al aire libre.",
+            "desc-drep-camiseta": "Camiseta deportiva color rojo institucional con detalles en blanco. Ideal para educación física y actividades deportivas.",
+            "desc-drep-pantaloneta": "Pantaloneta deportiva color rojo con detalles en blanco. Ideala para educación física.",
+            "desc-drep-short": "Short deportivo rojo con detalles en blanco. Cómodo y ligero para actividades deportivas.",
+            "desc-drep-pantalon": "Pantalón deportivo color gris con detalles en rojo. Ideal para actividades al aire libre.",
+            "desc-drep-chompa": "Chompa deportiva color gris con detalles en rojo. Ideal para el abrigo en actividades deportivas.",
 
             /* Product descriptions - deporte zoila */
-            "desc-dzo-polo": "Polo color azul marino con cuello y ribetes blancos. Ideal para educación física y actividades deportivas.",
-            "desc-dzo-buso": "Buso deportivo color gris con detalles en azul marino. Forro interior suave, ideal para días fríos y actividades al aire libre.",
+            "desc-dzo-camiseta": "Camiseta deportiva color azul marino con detalles en blanco. Ideal para educación física.",
+            "desc-dzo-pantaloneta": "Pantaloneta deportiva color azul marino con detalles en blanco. Ideal para educación física.",
+            "desc-dzo-short": "Short deportivo azul marino con detalles en blanco. Cómodo y ligero para actividades deportivas.",
+            "desc-dzo-pantalon": "Pantalón deportivo color gris con detalles en azul marino. Ideal para actividades al aire libre.",
+            "desc-dzo-chompa": "Chompa deportiva color gris con detalles en azul marino. Ideal para disfrutar de las actividades deportivas.",
 
             /* Tour */
-            "tour-eye-title": "Vista previa del uniforme",
-            "tour-eye-desc": "Pulsa el ojito para ver el uniforme en grande.",
-            "tour-catalog-title": "Catálogo completo",
-            "tour-catalog-desc": "Pulsa el botón para abrir todo el catálogo de esta institución.",
+            "tour-eye-desc": "Vista previa del uniforme.",
+            "tour-catalog-desc": "Pulsa el botón para desplegar catálogo completo.",
             "tour-location-title": "Cómo llegar",
             "tour-location-desc": "Pulsa este botón para ir directo a la ubicación del local.",
             "tour-next": "Siguiente",
@@ -174,7 +165,6 @@ const i18n = {
             "mary-corile-desc": "Navy blue V-neck jumper, intended for academic and institutional use.",
             "manuel-calle-desc": "Institutional design in seal and black, made for academic activities and official events.",
             "zoila-desc": "Complete institutional uniforms. Blue and white design, for academic and sports activities.",
-            "herlinda-desc": "Complete institutional uniforms. Purple and white design, for academic and sports activities.",
 
             /* Product type buttons */
             "product-casual": "Casual",
@@ -213,7 +203,6 @@ const i18n = {
             "hero-casual-mary": "Casual uniform for official and academic events. Navy blue design.",
             "hero-casual-manuel": "Casual uniform for official and academic events. Seal and black design.",
             "hero-casual-zoila": "Casual uniform for official and academic events. Blue and white design.",
-            "hero-casual-herlinda": "Casual uniform for official and academic events. Purple and white design.",
             "hero-deportivo": "Sports uniform for physical education and outdoor activities.",
 
             /* Footer on product pages */
@@ -224,73 +213,66 @@ const i18n = {
             "price-note": "Price by size",
             "theme-toggle": "Toggle theme",
 
-            /* Product descriptions - herlinda */
-            "desc-her-chompa": "Institutional purple V-neck jumper with white trim and the embroidered school emblem. Ideal for official and academic events.",
-            "desc-her-pantalon": "Dark gray gabardine dress trousers. Classic straight cut, comfortable and durable for daily wear.",
-            "desc-her-camisa": "White formal long-sleeve shirt with executive collar. Made of cotton and polyester for maximum comfort.",
-            "desc-her-zapatos": "Black formal school shoes with non-slip sole and high-resistance synthetic leather.",
-            "desc-her-corbata": "Institutional purple tie with white details. Made of high-gloss, durable polyester.",
-            "desc-her-medias": "Institutional purple socks with white details. Soft, durable knit for everyday use.",
-
-            /* Product descriptions - manuel */
-            "desc-man-chompa": "Institutional design in seal and black with V-neck and the embroidered school emblem. Ideal for academic activities and official events.",
-            "desc-man-pantalon": "Black gabardine trousers, high-durability fabric. Formal straight cut, comfortable for daily wear.",
-            "desc-man-camisa": "White formal long-sleeve shirt with semi-executive collar. Made of cotton and polyester for greater comfort.",
-            "desc-man-zapatos": "Black formal school shoes with anti-slip sole and high-resistance synthetic leather.",
-            "desc-man-corbata": "Institutional seal-colored tie with black details. Made of high-gloss, durable polyester.",
-            "desc-man-medias": "Institutional socks in seal and black. Soft, durable knit for daily use.",
+/* Product descriptions - manuel */
+            "desc-man-casaca": "Institutional jacket in seal and black with the embroidered school emblem. Ideal for official and academic events.",
+            "desc-man-polo": "Seal polo shirt with black collar and trim. Made of high-durability piqué cotton.",
+            "desc-man-camisa-hombre": "White formal long-sleeve shirt for men, executive collar. Made of cotton and polyester.",
+            "desc-man-blusa-mujer": "White formal blouse for women, long and short sleeve, executive collar. Made of cotton and polyester.",
+            "desc-man-pantalon": "Black fabric trousers, high-durability gabardine. Classic straight cut, comfortable for daily wear.",
+            "desc-man-falda": "Institutional black fabric pleated skirt. Made of high-durability gabardine.",
 
             /* Product descriptions - mary */
-            "desc-mary-chompa": "Navy blue jumper with V-neck and the embroidered school emblem. Made for academic and institutional use.",
-            "desc-mary-pantalon": "Navy blue gabardine trousers. Classic straight cut, comfortable and durable for daily use.",
-            "desc-mary-camisa": "White formal long-sleeve shirt with executive collar. Made of cotton and polyester for maximum comfort.",
-            "desc-mary-falda": "Institutional pleated navy blue skirt made of gabardine fabric, with pleats and adjustable waist.",
-            "desc-mary-zapatos": "Black formal school shoes with anti-slip sole and synthetic leather material.",
-            "desc-mary-corbata": "Institutional navy blue tie with details. Made of high-gloss, durable polyester.",
-            "desc-mary-medias": "Institutional navy blue socks. Soft, durable knit for daily use.",
+            "desc-mary-chompa": "Navy blue knitted jumper with V-neck and the embroidered school emblem. Made for academic and institutional use.",
+            "desc-mary-polo": "Navy blue polo shirt with white collar and trim. Made of high-durability piqué cotton.",
+            "desc-mary-camisa-hombre": "White formal long-sleeve shirt for men, executive collar. Made of cotton and polyester.",
+            "desc-mary-blusa-mujer": "White formal blouse for women, executive collar. Made of cotton and polyester.",
+            "desc-mary-pantalon": "Navy blue fabric trousers, in gabardine. Classic straight cut, comfortable and durable.",
+            "desc-mary-falda": "Institutional pleated navy blue fabric skirt, with adjustable waist and pleats.",
 
             /* Product descriptions - republica de chile */
-            "desc-rep-chompa": "Institutional red jumper with V-neck and the new institutional emblem. Ideal for academic activities and official events.",
-            "desc-rep-pantalon": "Slate gray gabardine trousers. Classic straight cut, comfortable and durable for daily wear.",
-            "desc-rep-camisa": "White formal long-sleeve shirt with executive collar. Made of cotton and polyester for maximum comfort.",
-            "desc-rep-chaleco": "Institutional red vest with white borders, made of highly durable and comfortable fabric.",
-            "desc-rep-zapatos": "Black formal school shoes with anti-slip sole and high-resistance synthetic leather.",
-            "desc-rep-corbata": "Institutional red tie with details. Made of high-gloss, durable polyester.",
-            "desc-rep-medias": "Institutional red socks with white details. Soft, durable knit for daily use.",
+            "desc-rep-chompa": "Institutional red knitted jumper with V-neck and the institutional emblem. Ideal for official and academic events.",
+            "desc-rep-camisa-hombre": "White formal long-sleeve shirt for men, executive collar. Made of cotton and polyester.",
+            "desc-rep-blusa-mujer": "White formal blouse for women, executive collar. Made of cotton and polyester.",
+            "desc-rep-pantalon": "Slate gray fabric trousers, in gabardine. Classic straight cut, comfortable and durable.",
+            "desc-rep-falda": "Institutional pleated slate gray fabric skirt, with adjustable waist.",
 
             /* Product descriptions - zoila */
-            "desc-zo-chompa": "Institutional navy blue jumper with V-neck, white trim and the embroidered school emblem. Ideal for official and academic events.",
-            "desc-zo-pantalon": "Navy blue gabardine trousers. Classic straight cut, comfortable and durable for daily wear.",
-            "desc-zo-camisa": "White formal long-sleeve shirt with executive collar. Made of cotton and polyester for maximum comfort.",
-            "desc-zo-zapatos": "Black formal school shoes with anti-slip sole and high-resistance synthetic leather.",
-            "desc-zo-corbata": "Institutional navy blue tie with white details. Made of high-gloss, durable polyester.",
-            "desc-zo-medias": "Institutional navy blue socks with white details. Soft, durable knit for daily use.",
-
-            /* Product descriptions - sport herlinda */
-            "desc-dher-polo": "Purple polo shirt with white collar and trim. Ideal for physical education and sports activities.",
-            "desc-dher-buso": "Gray sports hoodie with purple details. Soft inner lining, ideal for cold days and outdoor activities.",
+            "desc-zo-chompa": "Institutional navy blue knitted jumper with V-neck, white trim and the embroidered school emblem.",
+            "desc-zo-falda": "Pleated navy blue fabric skirt, with adjustable waist and gabardine fabric.",
+            "desc-zo-camisa-hombre": "White formal long-sleeve shirt for men, executive collar. Made of cotton and polyester.",
+            "desc-zo-blusa-mujer": "White formal blouse for women, executive collar. Made of cotton and polyester.",
+            "desc-zo-pantalon": "Navy blue fabric trousers, in gabardine. Classic straight cut, comfortable and durable.",
 
             /* Product descriptions - sport manuel */
-            "desc-dman-polo": "Seal polo shirt with black collar and trim. Ideal for physical education and sports activities.",
-            "desc-dman-buso": "Dark gray sports hoodie with seal details. Soft inner lining, ideal for cold days and outdoor activities.",
+            "desc-dman-camiseta": "Seal sports t-shirt with black collar and trim. Ideal for physical education and sports activities.",
+            "desc-dman-pantaloneta": "Black sports shorts with seal details. Ideal for physical education.",
+            "desc-dman-short": "Black sports short with seal details. Comfortable and light for sports activities.",
+            "desc-dman-pantalon": "Dark gray sports trousers with seal details. Soft inner lining, ideal for cold days.",
+            "desc-dman-chompa": "Dark gray sports jacket with seal details. Great for keeping warm during sports activities.",
 
             /* Product descriptions - sport mary */
-            "desc-dmary-polo": "Navy blue polo shirt with white collar and trim. Ideal for physical education and sports activities.",
-            "desc-dmary-buso": "Gray sports hoodie with navy blue details. Soft inner lining, ideal for cold days.",
+            "desc-dmary-pantaloneta": "Navy blue sports shorts with white details. Ideal for physical education.",
+            "desc-dmary-short": "Navy blue sports short with white details. Comfortable and light for sports activities.",
+            "desc-dmary-pantalon": "Gray sports trousers with navy blue details. Ideal for outdoor activities.",
+            "desc-dmary-chompa": "Gray sports jacket with navy blue details. Ideal for keeping warm during sports activities.",
 
             /* Product descriptions - sport republica */
-            "desc-drep-polo": "Institutional red polo shirt with white collar. Ideal for physical education and sports activities.",
-            "desc-drep-buso": "Gray sports hoodie with red details. Soft inner lining, ideal for cold days and outdoor activities.",
+            "desc-drep-camiseta": "Institutional red sports t-shirt with white details. Ideal for physical education and sports activities.",
+            "desc-drep-pantaloneta": "Red sports shorts with white details. Ideal for physical education.",
+            "desc-drep-short": "Red sports short with white details. Comfortable and light for sports activities.",
+            "desc-drep-pantalon": "Gray sports trousers with red details. Ideal for outdoor activities.",
+            "desc-drep-chompa": "Gray sports jacket with red details. Ideal for keeping warm during sports activities.",
 
             /* Product descriptions - sport zoila */
-"desc-dzo-polo": "Navy blue polo shirt with white collar and trim. Ideal for physical education and sports activities.",
-            "desc-dzo-buso": "Navy blue sports hoodie with white trim. Soft inner lining, ideal for cold days and outdoor activities.",
+            "desc-dzo-camiseta": "Navy blue sports t-shirt with white details. Ideal for physical education.",
+            "desc-dzo-pantaloneta": "Navy blue sports shorts with white details. Ideal for physical education.",
+            "desc-dzo-short": "Navy blue sports short with white details. Comfortable and light for sports activities.",
+            "desc-dzo-pantalon": "Gray sports trousers with navy blue details. Ideal for outdoor activities.",
+            "desc-dzo-chompa": "Gray sports jacket with navy blue details. Perfect for enjoying sports activities.",
 
-/* Tour */
-            "tour-eye-title": "Uniform preview",
-            "tour-eye-desc": "Click the eye to see the uniform in full size.",
-            "tour-catalog-title": "Full catalog",
-            "tour-catalog-desc": "Click the button to open the whole catalog for this school.",
+            /* Tour */
+            "tour-eye-desc": "Uniform preview.",
+            "tour-catalog-desc": "Click the button to open the full catalog.",
             "tour-location-title": "Directions",
             "tour-location-desc": "Click this button to go straight to the store location.",
             "tour-next": "Next",
