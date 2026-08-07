@@ -217,6 +217,15 @@ section {
     gap: 1rem;
 }
 
+#menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark);
+    cursor: pointer;
+}
+
 .header-action-link {
     color: var(--dark);
     font-weight: 500;
@@ -979,8 +988,40 @@ section {
         font-size: .9rem;
     }
 
+    #menu-btn {
+        display: block;
+    }
+
     .header-actions {
+        position: absolute;
+        top: 100%;
+        right: 4%;
+        width: 150px;
+        background: #fff;
+        flex-direction: column;
+        align-items: stretch;
         gap: .5rem;
+        padding: 1rem;
+        box-shadow: var(--shadow);
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
+    }
+
+    .header-actions.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    [data-theme="dark"] .header-actions {
+        background: #1c1c1c;
+    }
+
+    .header-actions .theme-btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .slide {
